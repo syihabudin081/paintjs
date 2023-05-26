@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Paint Clone</title>
+    <style>
+      #canvas {
+        border: 1px solid #000;
+      }
+      #button-container {
+        margin-top: 10px;
+      }
+      #button-container button {
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <canvas id="canvas" width="800" height="600"></canvas>
+    </div>
+    <div id="button-container">
+      <button onclick="setTool('pen')">Pen</button>
+      <button onclick="setTool('eraser')">Eraser</button>
+      <button onclick="setTool('line')">Line</button>
+      <button onclick="setTool('circle')">Circle</button>
+      <button onclick="setTool('square')">Square</button>
+      <input type="color" id="colorPicker" onchange="setColor(this.value)" />
+      <button onclick="fillCanvas()">Fill</button>
+      <button onclick="clearCanvas()">Clear</button>
+    </div>
+    <script src="./paint_clone.js"></script>
+  </body>
+</html>
